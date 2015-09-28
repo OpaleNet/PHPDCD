@@ -101,13 +101,13 @@ class Engine
     protected function analyze($files)
     {
         $detector = new Detector;
-        $result = $detector->detectDeadCode(
+        $issues = $detector->detectDeadCode(
             $files,
             $this->config['enabled']
         );
-        $results = $this->formatter->formatResults($result);
-        if ([] !== $results) {
-            $this->defaultWriter->write($results);
+        $reports = $this->formatter->formatResults($issues);
+        foreach($reports as $key => $report) {
+            $this->defaultWriter->write($report);
         }
     }
 }
