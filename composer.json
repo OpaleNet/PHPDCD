@@ -1,0 +1,19 @@
+{
+    "name": "opale/codeclimate-phpdcd",
+    "description": "A codeclimate engine testing for dead code (using php-dcd)",
+    "require": {
+        "sebastian/phpdcd": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yann",
+            "email": "yann@opale.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Opale\\PHPDCD\\": "src/PHPDCD"
+        }
+    }
+}
