@@ -13,8 +13,6 @@ set_error_handler(
     }
 );
 date_default_timezone_set('UTC');
-ini_set('memory_limit', -1);
-
 
 $config = json_decode(file_get_contents('/config.json'), true);
 $engine = new Engine($config, new Formatter(), new DefaultWriter(), new ErrorWriter());
