@@ -18,4 +18,4 @@ COPY . /usr/src/app
 USER app
 VOLUME /code
 
-CMD ["/usr/src/app/bin/codeclimate-php-dcd"]
+CMD ["/usr/src/app/bin/codeclimate-phpdcd"]
